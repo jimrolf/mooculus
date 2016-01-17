@@ -1,0 +1,23 @@
+\documentclass{ximera}
+  \outcome{Understand the derivative as a rate}
+\begin{document}
+\begin{problem}
+  %\recommendation{Elizabeth}
+  % I fixed this to mention "at the origin"
+  Suppose you are driving a car and you accelerate from a stopped
+  position (at the origin) to 60 mph with a constant acceleration.
+  Which graph below best resembles your position as a function of time
+  over this time interval?
+ 
+  \begin{multipleChoice}
+    % increasing, concave up
+    \choice[correct]{\begin{tikzpicture}[scale=0.33]\begin{axis}[clip=false,domain=0:1,ymin=-0.1,ymax=1.1,xmin=-0.1,xmax=1.1,xtick=\empty,ytick=\empty,axis lines=center,axis on top] \addplot [very thick, smooth] {x^2};\end{axis}\end{tikzpicture}}
+    % increasing, concave down
+    \choice{\begin{tikzpicture}[scale=0.33]\begin{axis}[clip=false,domain=0:1,ymin=-0.1,ymax=1.1,xmin=-0.1,xmax=1.1,xtick=\empty,ytick=\empty,axis lines=center,axis on top] \addplot [very thick, smooth,domain=0:1] ({x^2},{x});\end{axis}\end{tikzpicture}}
+    % decreasing, concave down
+    \choice{\begin{tikzpicture}[scale=0.33]\begin{axis}[clip=false,domain=0:1,ymin=-0.1,ymax=1.1,xmin=-0.1,xmax=1.1,xtick=\empty,ytick=\empty,axis lines=center,axis on top] \addplot [very thick, smooth,domain=0:1] ({x},{1-x^2});\end{axis}\end{tikzpicture}}
+    % decreasing, concave up
+    \choice{\begin{tikzpicture}[scale=0.33]\begin{axis}[clip=false,domain=0:1,ymin=-0.1,ymax=1.1,xmin=-0.1,xmax=1.1,xtick=\empty,ytick=\empty,axis lines=center,axis on top] \addplot [very thick, smooth,domain=0:1] ({x^2},{1-x});\end{axis}\end{tikzpicture}}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

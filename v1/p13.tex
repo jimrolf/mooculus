@@ -1,0 +1,32 @@
+\documentclass{ximera}
+  \outcome{Recognize that logarithm is concave down}
+  \outcome{Understand concavity numerically}
+\begin{document}
+\begin{problem}
+
+  Four equally spaced numbers are shown below on a number line.
+  \begin{image}
+    \begin{tikzpicture}[x=0.19\textwidth]
+      \draw[-{>[scale=1.75]}] (-0.05\textwidth,0) -- (0.8\textwidth,0);
+      \foreach \x in {0,...,4} {%
+        \draw (\x,-.1) -- (\x,.1);
+        \node[anchor=north,yshift=-2pt] at (\x,0) {$\x$};
+      }
+      \draw (0.5,0) node [circle,fill,inner sep=1pt,label=above:$x$](e){};
+      \draw (1.5,0) node [circle,fill,inner sep=1pt,label=above:$y$](e){};
+      \draw (2.5,0) node [circle,fill,inner sep=1pt,label=above:$z$](e){};
+      \draw (3.5,0) node [circle,fill,inner sep=1pt,label=above:$w$](e){};
+    \end{tikzpicture}
+  \end{image}
+
+  Let $f(t) = \ln t$ and consider $f(x)$ and $f(y)$ and $f(z)$ and
+  $f(w)$.  Among the pairs listed below, which pair of numbers is
+  farthest apart?
+  \begin{multipleChoice}
+    \choice[correct]{The pair $f(x)$ and $f(y)$.}
+    \choice{The pair $f(y)$ and $f(z)$.}
+    \choice{The pair $f(z)$ and $f(w)$.}
+    \choice{These pairs are all equally far apart.}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

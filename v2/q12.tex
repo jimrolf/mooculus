@@ -1,0 +1,24 @@
+\documentclass{ximera}
+
+\begin{document}
+\begin{problem}
+  Two numbers, $s$ and $t$, are shown below.
+  \begin{image}
+    \begin{tikzpicture}[x=0.19\textwidth]
+      \draw[-{>[scale=1.75]}] (-0.05\textwidth,0) -- (0.8\textwidth,0);
+      \foreach \x in {0,...,4} {%
+        \draw (\x,-.1) -- (\x,.1);
+        \node[anchor=north,yshift=-2pt] at (\x,0) {$\x$};
+      }
+      \draw (2.15,0) node [circle,fill,inner sep=1pt,label=above:$s$](e){};
+      \draw (2.45,0) node [circle,fill,inner sep=1pt,label=above:$t$](e){};
+    \end{tikzpicture}
+  \end{image}
+  Let $f(x) = 1/x$.  How does $f(s)$ compare with $f(t)$?
+  \begin{multipleChoice}
+    \choice{$f(s) < f(t)$}
+    \choice{$f(s) = f(t)$}
+    \choice[correct]{$f(s) > f(t)$}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

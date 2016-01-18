@@ -1,0 +1,25 @@
+\documentclass{ximera}
+
+\begin{document}
+\begin{problem}
+  Two real numbers, $x$ and $y$, are shown below on a number line.
+  \begin{image}
+  \begin{tikzpicture}[x=0.16\textwidth]
+    \draw[-{>[scale=1.75]}] (-0.05\textwidth,0) -- (0.8\textwidth,0);
+    \foreach \x in {0,...,4} {%
+      \draw (\x,-.1) -- (\x,.1);
+      \node[anchor=north,yshift=-2pt] at (\x,0) {$\x$};
+    }
+    \draw (0.85,0) node [circle,fill,inner sep=1pt,label=above:$x$](e){};
+    \draw (3.40,0) node [circle,fill,inner sep=1pt,label=above:$y$](e){};
+  \end{tikzpicture}
+  \end{image}
+  What is the best guess for $y/x$?
+  \begin{multipleChoice}
+    \choice{2.89}
+    \choice{3}
+    \choice[correct]{4}
+    \choice{6}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

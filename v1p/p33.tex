@@ -1,0 +1,56 @@
+\documentclass{ximera}
+  \outcome{Understand the derivative microscopically, i.e., by zooming in}
+\begin{document}
+\begin{problem}
+  
+  A certain function $f$ is graphed twice below; the graph on the right is a zoomed-in version of the graph on the left.
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+        clip=true,
+        domain=-2:2,
+        ytickmin=-10,ytickmax=10,
+        xtickmin=-10,xtickmax=10,
+        ymin=-2.1, ymax=2.1,
+        xmin=-2.1, xmax=2.1,
+        xlabel=$x$, ylabel=$y$,
+        axis lines=center,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+        ]          
+        \addplot [very thick,smooth] {2*sin(deg(x))*exp(-2*x*x)*(x+3) + 0.1*x*x};
+      \end{axis}
+    \end{tikzpicture}  
+    \hfill
+       \begin{tikzpicture}
+      \begin{axis}[
+        clip=true,
+        domain=-0.1:0.1,
+        ytickmin=-10,ytickmax=10,
+        xtickmin=-10,xtickmax=10,
+        ymin=-0.3, ymax=0.3,
+        xmin=-0.11, xmax=0.11,
+        xtick={-0.1,0.1},
+        ytick={-0.25,0.25},
+        xlabel=$x$, ylabel=$y$,
+        axis lines=center,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+        ]          
+        \addplot [very thick,smooth] {2*sin(deg(x))*exp(-2*x*x)*(x+3) + 0.1*x*x};
+        \draw (axis cs:{0.03},{2*sin(deg(0.03))*exp(-2*0.03*0.03)*(0.03+3) + 0.1*0.03*0.03}) node [circle,fill,inner sep=1pt,label=right:$(0.03{,}f(0.03))$](e){};
+      \end{axis}
+    \end{tikzpicture}  
+  \end{image}
+  From the zoomed-in graph, we note that $f(0.03) \approx 0.18$.  What is a best guess for $f(0.01)$?
+  \begin{multipleChoice}
+    \choice{$0.02$}
+    \choice{$0.04$}
+    \choice[correct]{$0.06$}
+    \choice{$0.08$}
+    \choice{$0.20$}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

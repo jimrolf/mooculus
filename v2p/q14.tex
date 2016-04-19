@@ -1,0 +1,26 @@
+\documentclass{ximera}
+
+\begin{document}
+\begin{problem}
+  Two pairs of numbers are shown below.
+  \begin{image}
+    \begin{tikzpicture}[x=0.19\textwidth]
+      \draw[-{>[scale=1.75]}] (-0.05\textwidth,0) -- (0.8\textwidth,0);
+      \foreach \x in {0,...,4} {%
+        \draw (\x,-.1) -- (\x,.1);
+        \node[anchor=north,yshift=-2pt] at (\x,0) {$\x$};
+      }
+      \draw (0.25,0) node [circle,fill,inner sep=1pt,label=above:$s$](e){};
+      \draw (1.25,0) node [circle,fill,inner sep=1pt,label=above:$s+h$](e){};
+      \draw (2.75,0) node [circle,fill,inner sep=1pt,label=above:$t$](e){};
+      \draw (3.75,0) node [circle,fill,inner sep=1pt,label=above:$t+h$](e){};
+    \end{tikzpicture}
+  \end{image}
+  Let $f(x) = -1/x$.  How does $f(s+h)-f(s)$ compare with $f(t+h) - f(t)$?
+  \begin{multipleChoice}
+    \choice{$f(s+h) - f(s) < f(t+h) - f(t)$}
+    \choice{$f(s+h) - f(s) = f(t+h) - f(t)$}
+    \choice[correct]{$f(s+h) - f(s) > f(t+h) - f(t)$}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

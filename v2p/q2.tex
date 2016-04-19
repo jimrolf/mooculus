@@ -1,0 +1,25 @@
+\documentclass{ximera}
+
+\begin{document}
+\begin{problem}
+  Two real numbers, $x$ and $y$, are shown below on a number line.
+  \begin{image}
+  \begin{tikzpicture}[x=0.15\textwidth]
+    \draw[-{>[scale=1.75]}] (-0.05\textwidth,0) -- (0.8\textwidth,0);
+    \foreach \x in {0,...,5} {%
+      \draw (\x,-.1) -- (\x,.1);
+      \node[anchor=north,yshift=-2pt] at (\x,0) {$\x$};
+    }
+    \draw (.8,0) node [circle,fill,inner sep=1pt,label=above:$x$](e){};
+    \draw (3.13,0) node [circle,fill,inner sep=1pt,label=above:$y$](e){};
+  \end{tikzpicture}
+  \end{image}
+  What is the best guess for $xy$?
+  \begin{multipleChoice}
+    \choice{1.4}
+    \choice{2.1}
+    \choice[correct]{2.5}
+    \choice{4}
+  \end{multipleChoice}
+\end{problem}
+\end{document}

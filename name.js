@@ -4,13 +4,18 @@ define(['jquery', 'tincan'], function($, TinCan) {
     target.width("100%");
     target.height(300);
 
-    target.insert( $('<div class="input-group">' +
+    target.append( $('<div class="input-group">' +
 		     '  <input type="text" class="form-control">' +
 		     '  <span class="input-group-btn">' +
 		     '    <button class="btn btn-default" type="button">Go!</button>' +
 		     '  </span>' +
 		     '</div>') );
 
+    $('.btn', target).click( function() {
+	var text = $('input', target).val();
+	alert(text);
+    });
+    
     /*
     target.trigger( 'ximera:answer-needed' );
 

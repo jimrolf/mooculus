@@ -7,7 +7,7 @@ define(['jquery', 'tincan'], function($, TinCan) {
     target.persistentData(function(event) {
 	if (target.persistentData( 'name')) {
 	    target.empty();
-	    target.append( $('<p>name = ' + target.persistentData( 'name' ) + '</p>') );
+	    target.append( $('<p>' + target.persistentData( 'name' ) + ' has completed the exam.</p>') );
 	} else {
 	    target.empty();	    
 	    target.append( $('<div class="input-group">' +
@@ -23,7 +23,10 @@ define(['jquery', 'tincan'], function($, TinCan) {
 		
 		if (text.match( /^[a-z]+\.[0-9]+$/ )) {
 		    target.persistentData( 'name', text );
-		    alert('Student ' + text + '@osu.edu has finished this exam.');
+		    TinCan.recordVerbObject( TinCan.verbAnswered,
+					     TinCan.activityHashToActivityObject( $(target).activityHash() ),
+					     { result:
+					       { response: text } } );
 		} else {
 		    alert('Your email address should be your @osu.edu email.  It must consist of all or some portion of your last name, a dot, and a number.');
 		    return false;

@@ -7,7 +7,7 @@ define(['jquery', 'tincan'], function($, TinCan) {
     target.persistentData('name.number', function(event) {
 	if (target.persistentData( 'name.number')) {
 	    target.empty();
-	    target.append( $('<p>' + target.persistentData( 'name') + '</p>') );
+	    target.append( $('<p>name = ' + target.persistentData( 'name') + '</p>') );
 	} else {
 	    target.empty();	    
 	    target.append( $('<div class="input-group">' +

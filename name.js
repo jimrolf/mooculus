@@ -5,9 +5,9 @@ define(['jquery', 'tincan'], function($, TinCan) {
     target.height(300);
 
     target.persistentData(function(event) {
-	if (target.persistentData( 'name.number')) {
+	if (target.persistentData( 'name')) {
 	    target.empty();
-	    target.append( $('<p>name = ' + target.persistentData( 'name.number' ) + '</p>') );
+	    target.append( $('<p>name = ' + target.persistentData( 'name' ) + '</p>') );
 	} else {
 	    target.empty();	    
 	    target.append( $('<div class="input-group">' +
@@ -22,7 +22,7 @@ define(['jquery', 'tincan'], function($, TinCan) {
 		text = text.replace(/@.*/, '');
 		
 		if (text.match( /^[a-z]+\.[0-9]+$/ )) {
-		    target.persistentData( 'name.number', text );
+		    target.persistentData( 'name', text );
 		    alert('Student ' + text + '@osu.edu has finished this exam.');
 		} else {
 		    alert('Your email address should be your @osu.edu email.  It must consist of all or some portion of your last name, a dot, and a number.');

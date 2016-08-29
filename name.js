@@ -4,7 +4,7 @@ define(['jquery', 'tincan'], function($, TinCan) {
     target.width("100%");
     target.height(300);
 
-    target.persistentData('name.number', function(event) {
+    target.persistentData(function(event) {
 	if (target.persistentData( 'name.number')) {
 	    target.empty();
 	    target.append( $('<p>name = ' + target.persistentData( 'name') + '</p>') );

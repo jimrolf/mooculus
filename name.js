@@ -7,13 +7,20 @@ define(['jquery', 'tincan'], function($, TinCan) {
     target.append( $('<div class="input-group">' +
 		     '  <input type="text" class="form-control">' +
 		     '  <span class="input-group-btn">' +
-		     '    <button class="btn btn-default" type="button">Go!</button>' +
+		     '    <button class="btn btn-default" type="button">Finish Exam</button>' +
 		     '  </span>' +
 		     '</div>') );
 
     $('.btn', target).click( function() {
-	var text = $('input', target).val();
-	alert(text);
+	var text = $('input', target).val().toLowerCase().trim();
+	text = text.replace(/@.*/, '');
+	
+	if (text.match( /^[a-z]+\.[0-9]+$/ )) {
+	    alert('Student ' + text + '@osu.edu has finished this exam.');
+	} else {
+	    alert('Your email address should be your @osu.edu email.  It must consist of all or some portion of your last name, a dot, and a number.');
+	    return false;
+	}
     });
     
     /*

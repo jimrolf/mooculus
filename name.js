@@ -21,7 +21,7 @@ define(['jquery', 'tincan'], function($, TinCan) {
 		var text = $('input', target).val().toLowerCase().trim();
 		text = text.replace(/@.*/, '');
 		
-		if (text.match( /^[a-z]+\.[0-9]+$/ )) {
+		if (text.match( /^[a-z-]+\.[0-9]+$/ )) {
 		    target.persistentData( 'name', text );
 		    TinCan.recordVerbObject( TinCan.verbAnswered,
 					     TinCan.activityHashToActivityObject( $(target).activityHash() ),

@@ -2,7 +2,7 @@
 
 **Assessment must be open-source.** When we ask our students to pay a
 publisher to get their homework graded, we are not only asking them to
-pay for points---we are also outsourcing our core mission.
+pay for points&mdash;we are also outsourcing our core mission.
 Furthermore, the most engaged students will want to dig into the guts
 of the assessment platform, necessitating that our students can "open
 the hood" and look inside the assessment platform.  For more on the

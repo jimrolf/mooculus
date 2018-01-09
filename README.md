@@ -12,10 +12,13 @@ Textbooks](https://er.educause.edu/articles/2016/8/an-open-perspective-on-intera
 The *Calculus Knowledge Assessment* is a bank of multiple-choice
 calculus questions openly licensed
 ([CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode))
-so that they can be used as broadly as possible.  With its goal of
-being a *large* bank of questions, the CKA bank is designed so that
-the easiest way for students to memorize the answers is simply to
-understand the underlying concepts.
+with the exception of p12, p05, p06 which are from
+[GoodQuestions](http://www.math.cornell.edu/~GoodQuestions/index.html)
+and therefore need to have their license status verified.
+
+With its goal of being a *large* bank of questions, the CKA bank is
+designed so that the easiest way for students to memorize the answers
+is simply to understand the underlying concepts.
 
 The *Math Education Forum* at Ohio State is currently drafting a paper
 detailing the CKA, measured learning gains in calculus, etc.  If you
